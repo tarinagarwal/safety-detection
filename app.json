@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "SafetyApp",
+    "slug": "safety-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#dc3545"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.safetyapp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to send emergency alerts with your current position.",
+        "NSMicrophoneUsageDescription": "This app needs access to your microphone to detect emergency voice commands."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#dc3545"
+      },
+      "package": "com.safetyapp",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-speech-recognition",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow SafetyApp to use your location for emergency alerts."
+        }
+      ]
+    ]
+  }
+}
